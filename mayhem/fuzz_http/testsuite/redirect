@@ -1,0 +1,5 @@
+HTTP/1.1 302 Found
+Location: http://127.0.0.1/a.m3u8
+Content-Length: 4
+
+abcd

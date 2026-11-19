@@ -1,0 +1,9 @@
+project: savantenvs/ZLMediaKit
+target: fuzz_gb28181
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gb28181/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzzers/fuzz_gb28181
+    libfuzzer: true
+    timeout: 10

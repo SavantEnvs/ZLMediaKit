@@ -1,0 +1,9 @@
+project: savantenvs/ZLMediaKit
+target: fuzz_srt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_srt/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzzers/fuzz_srt
+    libfuzzer: true
+    timeout: 10

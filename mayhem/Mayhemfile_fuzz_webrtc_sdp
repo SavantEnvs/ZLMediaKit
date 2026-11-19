@@ -1,0 +1,9 @@
+project: savantenvs/ZLMediaKit
+target: fuzz_webrtc_sdp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_webrtc_sdp/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzzers/fuzz_webrtc_sdp
+    libfuzzer: true
+    timeout: 10

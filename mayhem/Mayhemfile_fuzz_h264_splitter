@@ -1,0 +1,9 @@
+project: savantenvs/ZLMediaKit
+target: fuzz_h264_splitter
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_h264_splitter/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzzers/fuzz_h264_splitter
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/ZLMediaKit
+target: fuzz_mpeg_ts
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mpeg_ts/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzzers/fuzz_mpeg_ts
+    libfuzzer: true
+    timeout: 10
